@@ -70,7 +70,8 @@ def is_special_chars_present(word):
     check = regex.search(word)
     return 1 if check else 0
 
-def findLineNumber(lines, code_line):
+
+def find_line_number(lines, code_line):
     """
     Find the 1-based line number of code_line within the list of lines.
     params:  lines - list - lines of the file content
