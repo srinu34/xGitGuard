@@ -922,8 +922,8 @@ if __name__ == "__main__":
             if githubCalls.check_enterprise_branch_exists(repo_parts[0], repo_parts[1], branch, header):
                 logger.info(f"Branch '{branch}' exists in repo '{repo[0]}'. Scanning branch '{branch}'.")
             else:
-                logger.warning(f"Branch '{branch}' not found in repo '{repo[0]}'. Falling back to default branch.")
-                branch = ""
+                logger.error(f"Branch '{branch}' not found in repo '{repo[0]}'. Please provide a valid branch name")
+                sys.exit(1)
     elif branch and not repo:
         logger.info(f"Branch '{branch}' specified. Will attempt to scan files on this branch.")
 
