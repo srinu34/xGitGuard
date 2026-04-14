@@ -44,6 +44,7 @@ secrets:
       "Repo_Name",
       "Commit_Details",
       "Secret",
+      "Line_Number",
       "Code",
       "Detected_Timestamp",
       "Key_Weight",
